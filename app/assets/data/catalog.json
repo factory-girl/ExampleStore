@@ -1,0 +1,10 @@
+[
+  { "sku": 1001, "name": "Michelin Tyre", "price": 100 },
+  { "sku": 1002, "name": "Brake Disc", "price": 79.99 },
+  { "sku": 1003, "name": "Blue Tree Air Freshener", "price": 5.95 },
+  { "sku": 1004, "name": "Red Berry Air Freshener", "price": 5.95 },
+  { "sku": 1005, "name": "Pineapple Air Freshener", "price": 5.95 },
+  { "sku": 1006, "name": "Mango Air Freshener", "price": 5.95 },
+  { "sku": 1007, "name": "Oil Filter", "price": 45 },
+  { "sku": 1008, "name": "Air Filter", "price": 32.15 }
+]
