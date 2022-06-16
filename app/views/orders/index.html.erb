@@ -1,0 +1,14 @@
+<% if @orders.blank? %>
+  <p>There are not any orders currently in the system.</p>
+<% else %>
+  <ul id = "orders">
+    <% @orders.each do |order| %>
+      <li>ORDER <%= order.id %> (<%= order.customer %>)</li>
+      <% order.items.split(",").each do | item | %>
+          <ul id="items">
+            <li><%=item %></li>
+          </ul>
+      <% end %>
+    <% end %>
+  </ul>
+<% end %>
