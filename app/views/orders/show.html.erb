@@ -10,5 +10,9 @@
                 </ul>
         <% end %>
       <% end %>
+    <%=@order.total %>
+    <% if @order.member_discount %>
+    Saved 20% with member discount
+    <% end %>
   </ul>
 <% end %>

@@ -18,5 +18,8 @@ parsed_order_json.each do | order |
   end
 end
 
+order = Order.create(customer: "Test", member_discount: true)
+Item.create(order_id: order.id, quantity: "1", sku: "1001", item_total: "45")
+
 
 

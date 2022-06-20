@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2022_06_19_145534) do
   create_table "orders", force: :cascade do |t|
     t.string "customer"
     t.string "order_total"
+    t.boolean "member_discount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

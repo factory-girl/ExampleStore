@@ -3,6 +3,7 @@ class AddOrdersTable < ActiveRecord::Migration[6.1]
     create_table :orders do |t|
       t.string :customer
       t.string :order_total
+      t.boolean :member_discount
 
       t.timestamps
     end
