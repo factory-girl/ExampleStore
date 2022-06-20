@@ -3,10 +3,12 @@
 <% else %>
   <ul id = "orders">
     <li>ORDER <%= @order.id %> (<%= @order.customer %>)</li>
-      <% @order.items.split(",").each do | item | %>
-        <ul id="items">
-          <li><%=item %></li>
-        </ul>
+      <% @order_items.each do | item | %>
+        <% @order_item_names.each do | item_name | %>
+                <ul id="items">
+                  <li><%=item.quantity %>x <%=item_name %> @ <%=item.item_total %></li>
+                </ul>
+        <% end %>
       <% end %>
-    <% end %>
   </ul>
+<% end %>
