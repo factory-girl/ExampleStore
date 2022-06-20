@@ -6,7 +6,7 @@ class OrdersController < ApplicationController
     @order_items = []
     @order_item_names = []
       @orders.each do | order |
-        @order_items.push(order.items)
+        @order_items.push(order.items.to_a)
       end
 
       @order_items.each do | items |

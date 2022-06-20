@@ -1,20 +1,17 @@
 <% if @orders.blank? %>
   <p>There are not any orders currently in the system.</p>
 <% else %>
-  <ul id = "orders">
     <% @orders.each do | order | %>
       <ul id="orders">
         <li>ORDER <%= order.id %> (<%= order.customer %>)</li>
-        <% @order_items.each do | items | %>
-        <% items.each do | item | %>
-            <ul id="items">
+        <% order.items.each do | items | %>
             <% @order_item_names.each do | item_name | %>
-                <li><%=item.quantity %>x <%=item_name %> @ <%=item.item_total %></li>
+              <ul id="items">
+                <li><%=items.quantity %>x <%=item_name %> @ <%=items.item_total %></li>
+              </ul>
             <% end %>
-            </ul>
-          </ul>
-          <% end %>
         <% end %>
+      </ul>
   </ul>
     <% end %>
 <% end %>
